@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Quizlit: Study Longer. Study Harder.</title>
+	<link rel="icon" href="/favicon-32x32.png">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+	</script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+
+	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+
+	</script>
+	<script type="text/javascript" src="js/mdb.min.js">
+
+	</script>
+	<script src="script.js">
+
+	</script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-1">
+
+	</script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141204680-1');
+	</script>
+	<script>
+		jQuery(document).ready(function() {
+    		jQuery('#loading').fadeOut(1500);
+		});
+	</script>
+</head>
+
+<body>
+	<div id="hider"><img width=100% src="/background.png"></div>
+	<div class="jumbotron" style="margin-bottom:0;">
+		<a href="index.html" class="headerlink">
+			<div class="container text-center">
+				<h1>Quizlit. It's Lit </h1>
+				<p>Study Longer. Study Harder.</p>
+			</div>
+		</a>
+	</div>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+        <span class="icon-bar"></span>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">ELA</a></li>
+        <li><a href="#">ESS</a></li>
+        <li><a href="#">Math</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Chinese</a></li>
+        <li><a href="#">Other</a></li>
+        <li><a href="tools.html">Tools</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="questions.html"><span class="glyphicon glyphicon-question-sign"></span> Questions</a></li>
+        <li><a href="moreinfo.html"><span class="glyphicon glyphicon-info-sign"></span> More Info</a></li>
+        <li><a href="games/bored.html"> Bored?</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="flashcard-container">
+  <span class="sidebar">
+    <p style="font-size:25px">Info:</p>
+    <br>
+    We will be tested on Monday on the water cycle, reservoirs, and more. (Incomplete)
+  </span>
+  <div class="flashcard">
+    <div class="flashcard-text">
+      Food
+    </div>
+  </div>
+<div>
+<footer class="container-fluid text-center" style="margin-bottom:0;">
+  <div class="glyphicon glyphicon-chevron-left"></div> 
+  <div class="glyphicon glyphicon-chevron-right"></div>  
+</footer>
+<footer class="container-fluid text-center" style="margin-bottom:0;">
+  <p>© 2019 Lucas Industries</p>  
+</footer>
+<script>
+  $(".moreinfo").hide();
+  $(".less").hide();
+  var cards = [['派遣', '让一个人去做事'],['联盟', '可以做朋友的国家'],['探险', '去不知道的地方看一看'],['没有辜负妈妈的期望', '让妈妈很满意开心呢' ],['打通道路', '让其他人可以在道路上走'],['贸易繁盛/ 扩大贸易', '越来越多人买卖东西'],['丝路延伸', '丝路变得越来越长'],['横跨', '横向连接' ]]
+  card = 0
+  side = 1
+  $( ".flashcard" ).click(function() {
+    if (side === 0) {
+      side = 1;
+    } else if (side === 1) {
+      side = 0;
+    }
+	$('.flashcard-text').css("color","white");
+	  $('.flashcard-text').text("...");
+	  $(".flashcard").addClass("flashcard-collapsed");
+	  setTimeout(function () {
+		  $(".flashcard").removeClass("flashcard-collapsed");
+	  }, 300);
+	  setTimeout(function (){
+			  console.log('dfsdfs')
+			  $('.flashcard-text').css("color","black");
+			  $('.flashcard-text').text(cards[card][side]);
+	  }, 400);
+    })
+  $( ".glyphicon-chevron-left" ).click(function() {
+    if (card != 0) {
+	  $(".flashcard").addClass("offleft");
+	  	setTimeout(function (){
+		  $(".flashcard").removeClass("offleft");
+	  	}, 300)
+      card = card - 1;
+      side = 1;
+    }
+    $('.flashcard-text').text(cards[card][side])
+  });
+  $( ".glyphicon-chevron-right" ).click(function() {
+    if (card != cards.length - 1) {
+	  $(".flashcard").addClass("offright");
+	  	setTimeout(function (){
+		  $(".flashcard").removeClass("offright");
+	  	}, 300)
+      card = card + 1;
+      side = 1;
+    }
+    $('.flashcard-text').text(cards[card][side])
+  });
+  $('body').keydown(function (e){
+    if(e.keyCode === 37){
+      if (card != 0) {
+		$(".flashcard").addClass("offleft");
+	  	setTimeout(function (){
+		  $(".flashcard").removeClass("offleft");
+	  	}, 300)
+        card = card - 1;
+        side = 1;
+      }
+      $('.flashcard-text').text(cards[card][side])
+    }
+  })
+  $('body').keydown(function (e){
+    if(e.keyCode === 39){
+      if (card != cards.length - 1) {
+		$(".flashcard").addClass("offright");
+	  	setTimeout(function (){
+		  $(".flashcard").removeClass("offright");
+	  	}, 300)
+        card = card + 1;
+        side = 1;
+      }
+      $('.flashcard-text').text(cards[card][side])
+    }
+  })
+  $('body').keydown(function (e){
+    if(e.keyCode === 32){
+      if (side === 0) {
+        side = 1;
+      } else if (side === 1) {
+        side = 0;
+      }
+	  $('.flashcard-text').css("color","white");
+	  $('.flashcard-text').text("...");
+	  $(".flashcard").addClass("flashcard-collapsed");
+	  setTimeout(function () {
+		  $(".flashcard").removeClass("flashcard-collapsed");
+	  }, 300);
+	  setTimeout(function (){
+			  console.log('dfsdfs')
+			  $('.flashcard-text').css("color","black");
+			  $('.flashcard-text').text(cards[card][side]);
+	  }, 400)
+    }
+  })
+  function more() {
+    $(".moreinfo").show();
+    $(".less").show();
+    $(".more").hide();
+  }
+  function less() {
+    $(".moreinfo").hide();
+    $(".less").hide();
+    $(".more").show();
+  }
+</script>
+</body>

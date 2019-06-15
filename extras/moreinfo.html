@@ -89,26 +89,45 @@
     </form>
   </div>
 </nav>
-<div class="container">
-  <div class="col-sm-12 text-left"> 
-        <h1>Welcome</h1>
-        <p>Hi there! This website was built to help others study better. It includes flashcrads full of content and many more things to come! (This website has only been in progress for a week). I soon hope to add homework reminders, more study tool, announcements and much, much more. This website is made with HTML, CSS and Javascript using Boostrap and Jquery Libraries. Finally this will not always be up to date as it is a third party website. </p>
-        <p>The favicon(little icon on the tab) and the tab title will change when focused on another tab so it is hidden. You can test  this by looking at the tab icon and title and then switching on and off the website.</p>
+
+<header>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <!-- Slide One - Set the background image for this slide in the line below -->
+      <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/LAaSoL0LrYs/1920x1080')">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">Purpose</h2>
+          <p class="lead">This website was made out of a frustration about Quizlet, it aims to improve on that experience and make a cleaner, better looking and better study website!</p>
+        </div>
+      </div>
+      <!-- Slide Two - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/bF2vsubyHcQ/1920x1080')">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">Personally Tailored</h2>
+          <p class="lead">This website is personally tailored for students, it was made using bootstrap and jquery libraries in order to give students the best experience possible.</p>
+        </div>
+      </div>
+      <!-- Slide Three - Set the background image for this slide in the line below -->
+      <div class="carousel-item" style="background-image: url('https://source.unsplash.com/szFUQoyvrxM/1920x1080')">
+        <div class="carousel-caption d-none d-md-block">
+          <h2 class="display-4">Future Plans</h2>
+          <p class="lead">I intend to continue to work on this website in the future to further help improve students' education.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
   </div>
-  <div class="col-sm-12 text-center"> 
-        <h1>Changelog</h1>
-        <p>Publishing Date: Not Specified</p>
-        <h3>Alpha</h3>
-        <p>v0.3 Bored/Games page added</p>
-        <p>v0.2.4.1 More and Less function added to flashcards</p>
-        <p>v0.2.4 More info Added</p>
-        <p>v0.2.3.1 Favicon and Title</p>
-        <p>v0.2.3 Styling Upgrades</p>
-        <p>v0.2 Flashcards Added</p>
-        <p>v0.1 Intial Release</p>
-  </div>
-</div>
-<footer class="container-fluid text-center" style="margin-bottom:0;position:relative">
-  <p>© 2019 Lucas Industries</p>  
-</footer>
+</header>
 </body>

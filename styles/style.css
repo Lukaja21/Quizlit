@@ -151,7 +151,7 @@ html, body {
 	position: fixed !important;
 	width: 100%;
 	height: 100vh;
-	background: #fff url('https://lukaja21.github.io/Quizlit/loader.gif') no-repeat center center;
+	background: #fff url('https://lukaja21.github.io/Quizlit/media/loader.gif') no-repeat center center;
 	z-index: 9999;
   margin-top:-5%;
 }
@@ -183,4 +183,22 @@ html, body {
 
 .changelog {
   float:right;
+}
+
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.navbar {
+  opacity:.9;
+}
+
+.fa-ul {
+  list-style-type:disc;
 }

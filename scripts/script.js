@@ -25,27 +25,6 @@ document.addEventListener("visibilitychange", function() {
   }
 });
 
-$(window).keypress( function (e) {
-    if (e.keyCode == 47) {
-        if (!hiding) {
-            hiding = true;
-            $("#hider").show()
-            $('link[rel="icon"]').attr("href", "https://cais.learning.powerschool.com/favicon.png?1494045990")
-            $('title').text("PowerSchool Learning : Portal")
-        }
-    }
-});
-$(window).keypress( function (e) {
-    if (e.keyCode == 13) {
-        if (hiding) {
-            hiding = false;
-            $("#hider").hide()
-            $('link[rel="icon"]').attr("href", "https://lukaja21.github.io/favicon-32x32.png")
-            $('title').text("Quizlit: Sudy Longer. Study Harder.")
-        }
-    }
-});
-
 function hidead() {
 	$(".ad").hide();
 	$(".ad-contentt").hide()

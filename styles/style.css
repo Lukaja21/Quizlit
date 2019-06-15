@@ -148,11 +148,12 @@ html, body {
 	transform: translate(165%)
 }
 #loading {
-	position: fixed;
+	position: fixed !important;
 	width: 100%;
 	height: 100vh;
 	background: #fff url('https://lukaja21.github.io/Quizlit/loader.gif') no-repeat center center;
 	z-index: 9999;
+  margin-top:-5%;
 }
 
 .logo {

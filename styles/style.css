@@ -202,3 +202,56 @@ html, body {
 .fa-ul {
   list-style-type:disc;
 }
+
+.set-container {
+  width:100%;
+  height:10%;
+  background-color:white;
+  -moz-box-shadow: 0 0 10px #ccc;
+  -webkit-box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #ccc;
+  margin-top:3%;
+  font-size: 300%
+}
+
+.text-divider {
+  border-width: 3px;
+  border-color:rgb(48, 48, 48);
+  width:2%;
+  height:5%;
+  border-style: solid;
+  margin-left:1%;
+  margin-right:1%;
+  border-radius: 25px;
+  margin-top:100%;
+}
+
+.set-container-text {
+  width:100%;
+  height:100%;
+  margin-left:1%;
+  color:black;
+  text-decoration:none;
+}
+
+.subject-container {
+  margin-bottom:15%;
+  margin-top: 10%;
+  height:100%;
+  width:100%
+}
+
+.subject-nav {
+  margin-top: 1%;
+}
+
+.no-sets-warning {
+  text-align: center;
+}
+
+.set-thumbnail {
+  max-width:80%;
+  max-height:80%;
+  vertical-align: middle
+  margin-left:10%;
+}

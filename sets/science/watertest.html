@@ -3,15 +3,15 @@
 
 <head>
   <title>Quizlit: Study Longer. Study Harder.</title>
-  <link rel="icon" href="../favicon-32x32.png">
-  <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="../../favicon-32x32.png">
+  <link href="../../styles/style.css" rel="stylesheet" type="text/css" />
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
   </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </script>
-  <script src="../scripts/script.js">
+  <script src="../../scripts/script.js">
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-1">
@@ -50,38 +50,38 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="../index.html">Quizlit</a>
+  <a class="navbar-brand" href="../../index.html">Quizlit</a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Subjects
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">All</a>
+          <a class="dropdown-item" href="../../subjects/all.html">All</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Humanities</a>
-          <a class="dropdown-item" href="#">Math</a>
-          <a class="dropdown-item" href="#">Science</a>
-          <a class="dropdown-item" href="#">Chinese</a>
-          <a class="dropdown-item" href="#">Other</a>
+          <a class="dropdown-item" href="../../subjects/humanities.html">Humanities</a>
+          <a class="dropdown-item" href="../../subjects/math.html">Math</a>
+          <a class="dropdown-item" href="../../subjects/science.html">Science</a>
+          <a class="dropdown-item" href="../../subjects/chinese.html">Chinese</a>
+          <a class="dropdown-item" href="../../subjects/other.html">Other</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../extras/moreinfo.html">More Info</a>
+        <a class="nav-link" href="../../extras/moreinfo.html">More Info</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../extras/questions.html">Questions</a>
+        <a class="nav-link" href="../../extras/questions.html">Questions</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../extras/help.html">Help</a>
+        <a class="nav-link" href="../../extras/help.html">Help</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="../games/bored.html">Bored</a>
+        <a class="nav-link" href="../../games/bored.html">Bored</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -99,7 +99,7 @@
   </span>
   <div class="flashcard">
     <div class="flashcard-text">
-        让一个人去做事
+      Food
     </div>
   </div>
 <div>
@@ -166,7 +166,7 @@
 </footer>
 
 <script>
-  var cards = [['派遣', '让一个人去做事'],['联盟', '可以做朋友的国家'],['探险', '去不知道的地方看一看'],['没有辜负妈妈的期望', '让妈妈很满意开心呢' ],['打通道路', '让其他人可以在道路上走'],['贸易繁盛/ 扩大贸易', '越来越多人买卖东西'],['丝路延伸', '丝路变得越来越长'],['横跨', '横向连接' ]]
+  var cards = [['Food','Is Good'],['Drink','Is bad']]
   card = 0
   side = 1
   $( ".flashcard" ).click(function() {
@@ -189,10 +189,10 @@
   })
   $( ".fa-caret-left" ).click(function() {
     if (card != 0) {
-    $(".flashcard").addClass("offleft");
-      setTimeout(function (){
-      $(".flashcard").removeClass("offleft");
-      }, 300)
+	  $(".flashcard").addClass("offleft");
+	  	setTimeout(function (){
+		  $(".flashcard").removeClass("offleft");
+	  	}, 300)
       card = card - 1;
       side = 0;
     }
@@ -200,10 +200,10 @@
   });
   $( ".fa-caret-right" ).click(function() {
     if (card != cards.length - 1) {
-    $(".flashcard").addClass("offright");
-      setTimeout(function (){
-      $(".flashcard").removeClass("offright");
-      }, 300)
+	  $(".flashcard").addClass("offright");
+	  	setTimeout(function (){
+		  $(".flashcard").removeClass("offright");
+	  	}, 300)
       card = card + 1;
       side = 0;
     }
@@ -212,10 +212,10 @@
   $('body').keydown(function (e){
     if(e.keyCode === 37){
       if (card != 0) {
-    $(".flashcard").addClass("offleft");
-      setTimeout(function (){
-      $(".flashcard").removeClass("offleft");
-      }, 300)
+		$(".flashcard").addClass("offleft");
+	  	setTimeout(function (){
+		  $(".flashcard").removeClass("offleft");
+	  	}, 300)
         card = card - 1;
         side = 0;
       }
@@ -225,10 +225,10 @@
   $('body').keydown(function (e){
     if(e.keyCode === 39){
       if (card != cards.length - 1) {
-    $(".flashcard").addClass("offright");
-      setTimeout(function (){
-      $(".flashcard").removeClass("offright");
-      }, 300)
+		$(".flashcard").addClass("offright");
+	  	setTimeout(function (){
+		  $(".flashcard").removeClass("offright");
+	  	}, 300)
         card = card + 1;
         side = 0;
       }
@@ -242,17 +242,17 @@
       } else if (side === 1) {
         side = 0;
       }
-    $('.flashcard-text').css("color","white");
-    $('.flashcard-text').text("...");
-    $(".flashcard").addClass("flashcard-collapsed");
-    setTimeout(function () {
-      $(".flashcard").removeClass("flashcard-collapsed");
-    }, 300);
-    setTimeout(function (){
-        $('.flashcard-text').css("color","black");
-        $('.flashcard-text').text(cards[card][side]);
+	  $('.flashcard-text').css("color","white");
+	  $('.flashcard-text').text("...");
+	  $(".flashcard").addClass("flashcard-collapsed");
+	  setTimeout(function () {
+		  $(".flashcard").removeClass("flashcard-collapsed");
+	  }, 300);
+	  setTimeout(function (){
+			  $('.flashcard-text').css("color","black");
+			  $('.flashcard-text').text(cards[card][side]);
         window.scrollTo(0,-100)
-    }, 400)
+	  }, 400)
     }
   })
 </script>

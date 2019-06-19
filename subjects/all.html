@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quizlit: Study Longer. Study Harder.</title>
+  <link rel="icon" href="../favicon-32x32.png">
+  <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </script>
+  <script src="../scripts/script.js">
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141204680-1');
+
+  </script>
+  <script>
+    jQuery(document).ready(function() {
+        jQuery('#loading').fadeOut(1500);
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/5a86f9a71a.js"></script>
+</head>
+
+<body>
+  <div id="loading"></div>
+  <div class="ad">
+    <div class="ad-contentt">
+      <button type="button" class="btn btn-default" onclick="hidead()">
+        <span class="glyphicon glyphicon-remove"></span>
+      </button>
+      <h1 class="ad-header">Your ad here!</h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/New_Logo_AD.jpg" width=300 class="ad-image">
+    </div>
+  </div>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <img class="navbar-brand" src="https://lukaja21.github.io/Quizlit/favicon-32x32.png" alt="logo">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="../index.html">Quizlit</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Subjects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../subjects/all.html">All</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../subjects/humanities.html">Humanities</a>
+          <a class="dropdown-item" href="../subjects/math.html">Math</a>
+          <a class="dropdown-item" href="../subjects/science.html">Science</a>
+          <a class="dropdown-item" href="../subjects/chinese.html">Chinese</a>
+          <a class="dropdown-item" href="../subjects/other.html">Other</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../extras/moreinfo.html">More Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../extras/questions.html">Questions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../extras/help.html">Help</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../games/bored.html">Bored</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search Sets..." aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container subject-container">
+  <a href="../sets/chinese/chinesesilkroad2.html"><div class="set-container"><p class="set-container-text"><img class="set-thumbnail" src="https://ibc-static.broad.msu.edu/sites/globaledge/blog/54482.jpg"><span class="text-divider"></span>Chinese Silk Road 4-5</p></div></a>
+  <a href="../sets/chinese/chinesesilkroad.html"><div class="set-container"><p class="set-container-text"><img class="set-thumbnail" src="https://ibc-static.broad.msu.edu/sites/globaledge/blog/54482.jpg"><span class="text-divider"></span>Chinese Silk Road 1-3</p></div></a>
+  <a href="../sets/science/watertest.html"><div class="set-container"><p class="set-container-text"><img class="set-thumbnail" src="https://www.iiasa.ac.at/GenticsImageStore/200/auto/prop//web/home/research/researchPrograms/water/waterhome.jpg"><span class="text-divider"></span>Water Test</p></div></a>
+  <nav aria-label="Page navigation example" class="subject-nav">
+    <ul class="pagination">
+      <li class="page-item active"><a class="page-link" onclick="nextpage(1);">1</a></li>
+    </ul>
+  </nav>
+</div>
+</body>

@@ -1,16 +1,50 @@
 var hiding = false;
+var pages;
+var maxpage;
+
 $(document).ready(function() {
-    $("#hider").hide()
-    $(".ad").hide()
-    $(".less-button").hide()
-    $(".pricing").hide()
+  $("#hider").hide()
+  $(".ad").hide()
+  $(".less-button").hide()
+  $(".pricing").hide()
 });
 
-$(window).keyup( function (e) {
-    if (e.keyCode == 186) {
-      window.open("https://cais.learning.powerschool.com", "_blank");
-      return false;
+$(document).ready(function() {
+  var SetContainerNumber = $('.set-container').length;
+  console.log(SetContainerNumber)
+  if (SetContainerNumber > 10) {
+    $(".set-container").slice(10).hide()
+    pages = Math.ceil(SetContainerNumber / 10) + 1
+    console.log(pages)
+    for (i = 2; i < pages; i++) { 
+      $(".pagination").append("<li class='page-item'><a class='page-link' onclick='nextpage(" + i.toString() + ");'>" + i.toString() + "</a></li>")
     }
+    maxpage = $('.page-item').length;
+  } else {
+    $(".subject-nav").hide()
+    if (SetContainerNumber == 0) {
+      $(".subject-container").append("<h1 class='no-sets-warning'>Oops! Looks like there are no study sets for this subject yet.</h1>")
+    }
+  }
+});
+
+function nextpage(page) {
+  page = page - 1
+  if (page != maxpage) {
+    $(".set-container").slice(0).hide()
+    $('.page-item').slice(0).removeClass("active")
+    page += 1
+    $(".set-container").slice(page*10-10, page*10).show()
+    $('.page-item').slice(page - 1, page).addClass("active")
+    window.scrollTo(0,-100)
+  }
+}
+
+$(window).keyup( function (e) {
+  if (e.keyCode == 186) {
+    window.open("https://cais.learning.powerschool.com", "_blank");
+    return false;
+  }
 });
 
 document.addEventListener("visibilitychange", function() {

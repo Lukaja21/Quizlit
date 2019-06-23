@@ -23,7 +23,7 @@ $(document).ready(function() {
     $.ajax({
       'async': false,
       'global': false,
-      'url': "/content.json",
+      'url': "lukaja21.github.io/Quizlit/data/data.json",
       'dataType': "json",
       'success': function (data) {
           json = data;
@@ -43,7 +43,7 @@ function GetSetCards(SetName) {
     $.ajax({
       'async': false,
       'global': false,
-      'url': "/content.json",
+      'url': "lukaja21.github.io/Quizlit/data/data.json",
       'dataType': "json",
       'success': function (data) {
           json = data;

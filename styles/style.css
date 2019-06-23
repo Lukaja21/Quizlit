@@ -258,7 +258,10 @@ html, body {
 
 .set-search {
   max-height: 200px;
-  overflow: auto;
-  margin-left: -10%;
+  overflow: scroll;
   overflow-x: hidden;
+}
+
+.set-search-container {
+  margin-left: -10%;
 }

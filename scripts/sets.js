@@ -33,7 +33,8 @@ $(document).ready(function() {
 })();
     for (var i in myjson) {
       y = i.replace(/\s+/g, '').replace("part", "")
-      $(".set-search").append("<li><a style='width: auto;' href='https://lukaja21.github.io/Quizlit/sets/" + myjson[i][0] + "/" + y.toLowerCase() + ".html'>" + i + "</a></li>")
+      $(".set-search").append("<li><a style='width: auto;margin: auto' href='https://lukaja21.github.io/Quizlit/sets/" + myjson[i][0] + "/" + y.toLowerCase() + ".html'>" + i + "</a></li>")
+      $(".set-search").append("<div class='dropdown-divider'></div>")
   }
 })
 
@@ -53,3 +54,12 @@ function GetSetCards(SetName) {
 })();
   return myjson[SetName][1]
 }
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".dropdown-menu li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});

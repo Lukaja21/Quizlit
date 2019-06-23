@@ -26,10 +26,10 @@ $(document).ready(function() {
       'url': "lukaja21.github.io/Quizlit/data/data.json",
       'dataType': "json",
       'success': function (data) {
-          json = data;
+          myjson = data;
       }
     });
-  return json;
+  return myjson;
 })();
     for (var i in myjson) {
       y = i.replace(/\s+/g, '').replace("part", "")
@@ -46,10 +46,10 @@ function GetSetCards(SetName) {
       'url': "lukaja21.github.io/Quizlit/data/data.json",
       'dataType': "json",
       'success': function (data) {
-          json = data;
+          myjson = data;
       }
     });
-  return json;
+  return myjson;
 })();
   return myjson[SetName][1]
 }

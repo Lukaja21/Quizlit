@@ -13,6 +13,8 @@
   </script>
   <script src="../../scripts/script.js">
   </script>
+  <script src="../../scripts/sets.js">
+  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-1">
   </script>
@@ -84,10 +86,17 @@
         <a class="nav-link" href="../../games/bored.html">Bored</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search Sets..." aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item dropdown" style="margin-left: -10%;">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Search Sets
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu set-search">
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+          </ul>
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
 
@@ -166,9 +175,9 @@
 </footer>
 
 <script>
-  var cards = [['派遣', '让一个人去做事'],['联盟', '可以做朋友的国家'],['探险', '去不知道的地方看一看'],['没有辜负妈妈的期望', '让妈妈很满意开心呢' ],['打通道路', '让其他人可以在道路上走'],['贸易繁盛/ 扩大贸易', '越来越多人买卖东西'],['丝路延伸', '丝路变得越来越长'],['横跨', '横向连接' ]]
-  card = 0
-  side = 1
+  var cards = GetSetCards("Chinese Silk Road part 2")
+  var card = 0
+  var side = 0
   $( ".flashcard" ).click(function() {
     if (side === 0) {
       side = 1;
@@ -194,7 +203,7 @@
       $(".flashcard").removeClass("offleft");
       }, 300)
       card = card - 1;
-      side = 1;
+      side = 0;
     }
     $('.flashcard-text').text(cards[card][side])
   });
@@ -205,7 +214,7 @@
       $(".flashcard").removeClass("offright");
       }, 300)
       card = card + 1;
-      side = 1;
+      side = 0;
     }
     $('.flashcard-text').text(cards[card][side])
   });
@@ -217,7 +226,7 @@
       $(".flashcard").removeClass("offleft");
       }, 300)
         card = card - 1;
-        side = 1;
+        side = 0;
       }
       $('.flashcard-text').text(cards[card][side])
     }
@@ -230,7 +239,7 @@
       $(".flashcard").removeClass("offright");
       }, 300)
         card = card + 1;
-        side = 1;
+        side = 0;
       }
       $('.flashcard-text').text(cards[card][side])
     }

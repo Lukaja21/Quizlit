@@ -13,6 +13,8 @@
   </script>
   <script src="../scripts/script.js">
   </script>
+  <script src="../scripts/sets.js">
+  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-1">
   </script>
@@ -61,13 +63,13 @@
           Subjects
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../subjects/all.html">All</a>
+          <a class="dropdown-item" href="all.html">All</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../subjects/humanities.html">Humanities</a>
-          <a class="dropdown-item" href="../subjects/math.html">Math</a>
-          <a class="dropdown-item" href="../subjects/science.html">Science</a>
-          <a class="dropdown-item" href="../subjects/chinese.html">Chinese</a>
-          <a class="dropdown-item" href="../subjects/other.html">Other</a>
+          <a class="dropdown-item" href="humanities.html">Humanities</a>
+          <a class="dropdown-item" href="math.html">Math</a>
+          <a class="dropdown-item" href="science.html">Science</a>
+          <a class="dropdown-item" href="chinese.html">Chinese</a>
+          <a class="dropdown-item" href="other.html">Other</a>
         </div>
       </li>
       <li class="nav-item">
@@ -83,10 +85,17 @@
         <a class="nav-link" href="../games/bored.html">Bored</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search Sets..." aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item dropdown" style="margin-left: -10%;">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Search Sets
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu set-search">
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+          </ul>
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
 
@@ -100,4 +109,14 @@
     </ul>
   </nav>
 </div>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".dropdown-menu li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
 </body>

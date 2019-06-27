@@ -213,7 +213,8 @@
 <iframe scrolling="no" frameborder="0" allowtransparency="true" src="./2048_files/widget_iframe.d753e00c3e838c1b2558149bd3f6ecb8.html" title="Twitter settings iframe" style="display: none;"></iframe>
 <script>
   function fortnite() {
-    $(".tile.tile-2 .tile-inner").css({"background-image":"url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/19_2.png)"})
+    var sheet = document.styleSheets[0];
+    sheet.insertRule(".tile.tile-2 {background-image:url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/19_2.png)}");
     $(".tile.tile-4 .tile-inner").css({"background-image":"url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/21_3.png)"})
     $(".tile.tile-8 .tile-inner").css({"background-image":"url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/24_3.png)"})
     $(".tile.tile-16 .tile-inner").css({"background-image":"url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/21_4.png)"})

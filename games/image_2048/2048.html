@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <!-- saved from url=(0020)https://play2048.co/ -->
-<html lang="en" class="gr__play2048_co"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" class="gr__play2048_co"><head>
   
   <title>2048</title>
-
+  <link href="2048_files/main.css" rel="stylesheet" type="text/css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <script id="twitter-wjs" src="./2048_files/widgets.js.download"></script><script>
     if (typeof window !== undefined && typeof window.location !== undefined && window.location.hostname === "gabrielecirulli.github.io") {
       if (typeof window.location.replace === "function") {
@@ -24,7 +25,6 @@
     gtag("config", "UA-42620757-2");
   </script>
 
-  <link href="./2048_files/main.css" rel="stylesheet" type="text/css">
   <link rel="shortcut icon" href="https://play2048.co/favicon.ico">
   <link rel="apple-touch-icon" href="https://play2048.co/meta/apple-touch-icon.png">
   <link rel="apple-touch-startup-image" href="https://play2048.co/meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
@@ -214,7 +214,8 @@
 <script>
   function fortnite() {
     var sheet = document.styleSheets[0];
-    sheet.insertRule(".tile.tile-2 {background-image:url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/19_2.png)}");
+    console.log(sheet)
+    sheet.insertRule(".tile.tile-2 {background-image:url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/19_2.png)}", -1);
     $(".tile.tile-4 .tile-inner").css({"background-image":"url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/21_3.png)"})
     $(".tile.tile-8 .tile-inner").css({"background-image":"url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/24_3.png)"})
     $(".tile.tile-16 .tile-inner").css({"background-image":"url(https://gamewith-en.akamaized.net/article_tools/fortnite/gacha/21_4.png)"})

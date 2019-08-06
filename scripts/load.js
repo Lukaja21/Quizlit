@@ -4,13 +4,10 @@ $(document).ready(function() {
    		url: 'https://quizlit.me/data/data.json',
     	dataType: 'text',
     	success: myjson => {
-    		console.log(myjson);
     		myjson = JSON.parse(myjson);
-    		console.log(myjson);
     		var i;
 		for (i = 0; i < Object.keys(myjson).length; i++) {
 			var key = Object.keys(myjson)[i];
-			console.log(key)
 			if (myjson[key][0] == "chinese") {
 				var thumbnail = "https://asiasociety.org/sites/default/files/styles/1200w/public/C/calligraphy.jpg?itok=aSTzLe_m"
 			} else if (myjson[key][0] == "science") {
@@ -23,7 +20,7 @@ $(document).ready(function() {
 			$(".row").append(`
 			<div class='col-lg-4 col-sm-6 mb-4'>
 				<div class='card h-100'>
-					<a href='sets/${myjson[key][0]}/${key.replace(/\s+/g, '').replace("part", "")}.html'><img class='card-img-top' src='${thumbnail}'></a>
+					<a href='sets/${myjson[key][0]}/${key.replace(/\s+/g, '')}.html'><img class='card-img-top' src='${thumbnail}'></a>
 					<div class='card-body'>
 						<h4 class='card-title'><a href='sets/${myjson[key][0]}/${key.replace(/\s+/g, '').replace("part", "")}.html'>${key}</a></h4>
 						<p class='card-text'>${myjson[key][2]}</p>

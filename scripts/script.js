@@ -11,11 +11,9 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   var SetContainerNumber = $('.set-container').length;
-  console.log(SetContainerNumber)
   if (SetContainerNumber > 10) {
     $(".set-container").slice(10).hide()
     pages = Math.ceil(SetContainerNumber / 10) + 1
-    console.log(pages)
     for (i = 2; i < pages; i++) { 
       $(".pagination").append("<li class='page-item'><a class='page-link' onclick='nextpage(" + i.toString() + ");'>" + i.toString() + "</a></li>")
     }

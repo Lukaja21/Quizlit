@@ -80,9 +80,6 @@ function GetSetCards(setName, cb){
       dataType: 'text',
       success: myjson => {
         myjson = JSON.parse(myjson);
-        console.log(myjson)
-        console.log(setName)
-        console.log(myjson["Chinese Silk Road part 2"][1])
         cb(myjson[setName][1]);
       }
     })

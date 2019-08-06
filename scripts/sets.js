@@ -16,7 +16,7 @@ $(document).ready(function() {
   return myjson;
 })();
     for (var i in myjson) {
-      y = i.replace(/\s+/g, '').replace("part", "")
+      y = i.replace(/\s+/g, '')
       $(".set-search").append("<li><a style='width: auto;margin: auto' href='https://quizlit.me/sets/" + myjson[i][0] + "/" + y.toLowerCase() + ".html'>" + i + "</a></li>")
       $(".set-search").append("<div class='dropdown-divider'></div>")
   }
@@ -49,7 +49,7 @@ $(document).ready(function() {
             for (let [key, value] of Object.entries(myjson)) {
               if (value[0] == subject && subject != "all" && subject != "other") {
                 console.log("hi")
-                $(".subject-container").append(`<a href="../sets/${subject}/${key}.html">
+                $(".subject-container").append(`<a href="../sets/${subject}/${key.replace(/\s+/g, '')}.html">
                   <div class="set-container">
                     <p class="set-container-text">
                       <img class="set-thumbnail" src="${thumbnail}">
@@ -63,3 +63,27 @@ $(document).ready(function() {
     })
   }
 })
+
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".dropdown-menu li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+function GetSetCards(setName, cb){
+  $.ajax({
+      method: 'GET',
+      url: 'https://quizlit.me/data/data.json',
+      dataType: 'text',
+      success: myjson => {
+        myjson = JSON.parse(myjson);
+        console.log(myjson)
+        console.log(setName)
+        console.log(myjson["Chinese Silk Road part 2"][1])
+        cb(myjson[setName][1]);
+      }
+    })
+}

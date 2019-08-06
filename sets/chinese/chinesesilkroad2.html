@@ -175,9 +175,9 @@
 </footer>
 
 <script>
-  var cards = GetSetCards("Chinese Silk Road part 2")
+  GetSetCards("Chinese Silk Road part 2", cards => {
   var card = 0
-  var side = 0
+  var side = 1
   $( ".flashcard" ).click(function() {
     if (side === 0) {
       side = 1;
@@ -203,7 +203,7 @@
       $(".flashcard").removeClass("offleft");
       }, 300)
       card = card - 1;
-      side = 0;
+      side = 1;
     }
     $('.flashcard-text').text(cards[card][side])
   });
@@ -214,7 +214,7 @@
       $(".flashcard").removeClass("offright");
       }, 300)
       card = card + 1;
-      side = 0;
+      side = 1;
     }
     $('.flashcard-text').text(cards[card][side])
   });
@@ -226,7 +226,7 @@
       $(".flashcard").removeClass("offleft");
       }, 300)
         card = card - 1;
-        side = 0;
+        side = 1;
       }
       $('.flashcard-text').text(cards[card][side])
     }
@@ -239,7 +239,7 @@
       $(".flashcard").removeClass("offright");
       }, 300)
         card = card + 1;
-        side = 0;
+        side = 1;
       }
       $('.flashcard-text').text(cards[card][side])
     }
@@ -263,6 +263,7 @@
         window.scrollTo(0,-100)
     }, 400)
     }
+  })
   })
 </script>
 </body>

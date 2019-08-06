@@ -175,10 +175,9 @@
 </footer>
 
 <script>
-  var cards = GetSetCards("Water Test")
+  GetSetCards("Water Test", cards => {
   var card = 0
   var side = 0
-  console.log(side)
   $( ".flashcard" ).click(function() {
     if (side === 0) {
       side = 1;
@@ -199,10 +198,10 @@
   })
   $( ".fa-caret-left" ).click(function() {
     if (card != 0) {
-	  $(".flashcard").addClass("offleft");
-	  	setTimeout(function (){
-		  $(".flashcard").removeClass("offleft");
-	  	}, 300)
+    $(".flashcard").addClass("offleft");
+      setTimeout(function (){
+      $(".flashcard").removeClass("offleft");
+      }, 300)
       card = card - 1;
       side = 0;
     }
@@ -210,10 +209,10 @@
   });
   $( ".fa-caret-right" ).click(function() {
     if (card != cards.length - 1) {
-	  $(".flashcard").addClass("offright");
-	  	setTimeout(function (){
-		  $(".flashcard").removeClass("offright");
-	  	}, 300)
+    $(".flashcard").addClass("offright");
+      setTimeout(function (){
+      $(".flashcard").removeClass("offright");
+      }, 300)
       card = card + 1;
       side = 0;
     }
@@ -222,10 +221,10 @@
   $('body').keydown(function (e){
     if(e.keyCode === 37){
       if (card != 0) {
-		$(".flashcard").addClass("offleft");
-	  	setTimeout(function (){
-		  $(".flashcard").removeClass("offleft");
-	  	}, 300)
+    $(".flashcard").addClass("offleft");
+      setTimeout(function (){
+      $(".flashcard").removeClass("offleft");
+      }, 300)
         card = card - 1;
         side = 0;
       }
@@ -235,10 +234,10 @@
   $('body').keydown(function (e){
     if(e.keyCode === 39){
       if (card != cards.length - 1) {
-		$(".flashcard").addClass("offright");
-	  	setTimeout(function (){
-		  $(".flashcard").removeClass("offright");
-	  	}, 300)
+    $(".flashcard").addClass("offright");
+      setTimeout(function (){
+      $(".flashcard").removeClass("offright");
+      }, 300)
         card = card + 1;
         side = 0;
       }
@@ -252,18 +251,19 @@
       } else if (side === 1) {
         side = 0;
       }
-	  $('.flashcard-text').css("color","white");
-	  $('.flashcard-text').text("...");
-	  $(".flashcard").addClass("flashcard-collapsed");
-	  setTimeout(function () {
-		  $(".flashcard").removeClass("flashcard-collapsed");
-	  }, 300);
-	  setTimeout(function (){
-			  $('.flashcard-text').css("color","black");
-			  $('.flashcard-text').text(cards[card][side]);
+    $('.flashcard-text').css("color","white");
+    $('.flashcard-text').text("...");
+    $(".flashcard").addClass("flashcard-collapsed");
+    setTimeout(function () {
+      $(".flashcard").removeClass("flashcard-collapsed");
+    }, 300);
+    setTimeout(function (){
+        $('.flashcard-text').css("color","black");
+        $('.flashcard-text').text(cards[card][side]);
         window.scrollTo(0,-100)
-	  }, 400)
+    }, 400)
     }
+  })
   })
 </script>
 </body>

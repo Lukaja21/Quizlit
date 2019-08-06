@@ -175,9 +175,9 @@
 </footer>
 
 <script>
-  var cards = GetSetCards("Chinese Silk Road")
-  card = 0
-  side = 1
+  GetSetCards("Chinese Silk Road", cards => {
+  var card = 0
+  var side = 1
   $( ".flashcard" ).click(function() {
     if (side === 0) {
       side = 1;
@@ -263,6 +263,7 @@
         window.scrollTo(0,-100)
     }, 400)
     }
+  })
   })
 </script>
 </body>

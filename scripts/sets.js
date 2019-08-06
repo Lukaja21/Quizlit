@@ -49,7 +49,7 @@ $(document).ready(function() {
             for (let [key, value] of Object.entries(myjson)) {
               if (value[0] == subject && subject != "all" && subject != "other") {
                 console.log("hi")
-                $(".subject-container").append(`<a href="../sets/${subject}/${key.replace(/\s+/g, '')}.html">
+                $(".subject-container").append(`<a href="../sets/${subject}/${key.replace(/\s+/g, '').toLowerCase()}.html">
                   <div class="set-container">
                     <p class="set-container-text">
                       <img class="set-thumbnail" src="${thumbnail}">

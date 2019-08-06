@@ -10,20 +10,22 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  var SetContainerNumber = $('.set-container').length;
-  if (SetContainerNumber > 10) {
-    $(".set-container").slice(10).hide()
-    pages = Math.ceil(SetContainerNumber / 10) + 1
-    for (i = 2; i < pages; i++) { 
-      $(".pagination").append("<li class='page-item'><a class='page-link' onclick='nextpage(" + i.toString() + ");'>" + i.toString() + "</a></li>")
+  setTimeout(function(){
+    var SetContainerNumber = $('.set-container').length;
+    if (SetContainerNumber > 10) {
+      $(".set-container").slice(10).hide()
+      pages = Math.ceil(SetContainerNumber / 10) + 1
+      for (i = 2; i < pages; i++) { 
+        $(".pagination").append("<li class='page-item'><a class='page-link' onclick='nextpage(" + i.toString() + ");'>" + i.toString() + "</a></li>")
+      }
+      maxpage = $('.page-item').length;
+    } else {
+      $(".subject-nav").hide()
+      if (SetContainerNumber == 0) {
+        $(".subject-container").append("<h1 class='no-sets-warning'>Oops! Looks like there are no study sets for this subject yet.</h1>")
+      }
     }
-    maxpage = $('.page-item').length;
-  } else {
-    $(".subject-nav").hide()
-    if (SetContainerNumber == 0) {
-      $(".subject-container").append("<h1 class='no-sets-warning'>Oops! Looks like there are no study sets for this subject yet.</h1>")
-    }
-  }
+  }, 100);
 });
 
 function nextpage(page) {

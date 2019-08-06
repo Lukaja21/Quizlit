@@ -1,5 +1,3 @@
-
-
 //Populates all of the sets for the seacrh bar
 $(document).ready(function() {
   var myjson = (function() {
@@ -80,6 +78,7 @@ function GetSetCards(setName, cb){
       dataType: 'text',
       success: myjson => {
         myjson = JSON.parse(myjson);
+        $(".sidebar").append(`<p>${myjson[setName][2]}</p>`)
         cb(myjson[setName][1]);
       }
     })

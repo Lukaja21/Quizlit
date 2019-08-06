@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$.ajax({
     	method: 'GET',
-   		url: 'https://lukaja21.github.io/Quizlit/data/data.json',
+   		url: 'https://quizlit.me/data/data.json',
     	dataType: 'text',
     	success: myjson => {
     		console.log(myjson);

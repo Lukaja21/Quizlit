@@ -51,7 +51,7 @@ document.addEventListener("visibilitychange", function() {
   if (document.visibilityState == "visible") {
     if (!hiding){ 
       $("title").text("Quizlit: Study Longer. Study Harder.");
-      $("link[rel=icon]").attr("href", "https://lukaja21.github.io/Quizlit/favicon-32x32.png");
+      $("link[rel=icon]").attr("href", "https://quizlit.me/favicon-32x32.png");
     }
   } else {
     $("title").text("PowerSchool Learning : Portal");

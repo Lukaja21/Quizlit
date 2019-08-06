@@ -73,13 +73,13 @@ $(document).ready(function(){
 
 function GetSetCards(setName, cb){
   $.ajax({
-      method: 'GET',
-      url: 'https://quizlit.me/data/data.json',
-      dataType: 'text',
-      success: myjson => {
-        myjson = JSON.parse(myjson);
-        $(".sidebar").append(`<p>${myjson[setName][2]}</p>`)
-        cb(myjson[setName][1]);
-      }
-    })
+    method: 'GET',
+    url: 'https://quizlit.me/data/data.json',
+    dataType: 'text',
+    success: myjson => {
+      myjson = JSON.parse(myjson);
+      $(".sidebar").append(`<p>${myjson[setName][2]}</p>`)
+      cb(myjson[setName][1]);
+    }
+  })
 }

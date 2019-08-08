@@ -5,9 +5,7 @@ $(document).ready(function() {
       dataType: 'text',
       success: myjson => {
         myjson = JSON.parse(myjson);
-        var i;
-    for (i = 0; i < Object.keys(myjson).length; i++) {
-      var key = Object.keys(myjson)[i];
+    for (let [key, value] of Object.entries(myjson)) {
       if (myjson[key][0] == "chinese") {
         var thumbnail = "https://asiasociety.org/sites/default/files/styles/1200w/public/C/calligraphy.jpg?itok=aSTzLe_m"
       } else if (myjson[key][0] == "science") {

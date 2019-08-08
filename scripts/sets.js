@@ -79,6 +79,15 @@ function GetSetCards(setName, cb){
     success: myjson => {
       myjson = JSON.parse(myjson);
       $(".sidebar").append(`<p>${myjson[setName][2]}</p>`)
+      $(".important-texts").append(`<p>${myjson[setName][3][0]}</p>
+                                    <button onclick="ExpandBlock('one')" class="btn btn-block btn-primary text-uppercase block-one-button">Expand</button>`)
+      for (var i in myjson[setName][3][1]) {
+        $(".vocab-words").append(`<li><span class="fa-li"><i class="fas fa-circle"></i></span>${myjson[setName][3][1][i]}</li>`)
+      }
+      for (var i in myjson[setName][3][2]) {
+        $(".tips").append(`<li><span class="fa-li"><i class="fas fa-circle"></i></span>${myjson[setName][3][2][i]}</li>`)
+      }
+      $(".pricing").hide()
       cb(myjson[setName][1]);
     }
   })

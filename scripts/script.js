@@ -6,7 +6,6 @@ $(document).ready(function() {
   $("#hider").hide()
   $(".ad").hide()
   $(".less-button").hide()
-  $(".pricing").hide()
 });
 
 $(document).ready(function() {
@@ -58,12 +57,6 @@ document.addEventListener("visibilitychange", function() {
     $("link[rel=icon]").attr("href", "https://cais.learning.powerschool.com/favicon.png?1494045990");
   }
 });
-
-function hidead() {
-	$(".ad").hide();
-	$(".ad-contentt").hide()
-	$(".btn-default").hide()
-}
 
 function showmore() {
   $(".less-button").show()

@@ -24,7 +24,7 @@ $(document).ready(function() {
         $(".subject-container").append("<h1 class='no-sets-warning'>Oops! Looks like there are no study sets for this subject yet.</h1>")
       }
     }
-  }, 100);
+  }, 200);
 });
 
 function nextpage(page) {

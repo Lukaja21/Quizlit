@@ -1,3 +1,4 @@
+//Loads Front Page
 $(document).ready(function() {
   $.ajax({
       method: 'GET',
@@ -27,13 +28,11 @@ $(document).ready(function() {
       </div>`)
     }
         if (Object.keys(myjson).length <= 6){
-    
-    var blanks = 6 - Object.keys(myjson).length
-    for (i = 0; i < blanks; i++) {
-      $(".row").append("<div class='col-lg-4 col-sm-6 mb-4'><div class='card h-100'><a href='#'><img class='card-img-top' src='https://placehold.it/700x400' alt=''></a><div class='card-body'><h4 class='card-title'><a href='#'>Project Five</a></h4><p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p></div></div></div>")
-    }
-  }
+          var blanks = 6 - Object.keys(myjson).length
+          for (i = 0; i < blanks; i++) {
+            $(".row").append("<div class='col-lg-4 col-sm-6 mb-4'><div class='card h-100'><a href='#'><img class='card-img-top' src='https://placehold.it/700x400' alt=''></a><div class='card-body'><h4 class='card-title'><a href='#'>Project Five</a></h4><p class='card-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p></div></div></div>")
+          }
+        }
       }
   });
-}
-);
+});

@@ -1,3 +1,4 @@
+const _MS_PER_DAY = 1000 * 60 * 60 * 24;
 //Populates all of the sets for the seacrh bar
 $(document).ready(function() {
   var myjson = (function() {
@@ -105,7 +106,35 @@ function GetSetCards(setName, cb){
     url: 'https://quizlit.me/data/data.json',
     dataType: 'text',
     success: myjson => {
+      var date_diff_indays = function(date1, date2) {
+        dt1 = new Date(date1);
+        dt2 = new Date(date2);
+        return Math.floor((Date.UTC(dt2.getFullYear(), dt2.getMonth(), dt2.getDate()) - Date.UTC(dt1.getFullYear(), dt1.getMonth(), dt1.getDate()) ) /(1000 * 60 * 60 * 24));
+      }
       myjson = JSON.parse(myjson);
+      testDate = new Date(myjson[setName][4])
+      currentDate = new Date()
+      currentMonth = currentDate.getMonth() + 1
+      currentDate = currentMonth.toString() + "/" + currentDate.getUTCDate().toString() + "/" + currentDate.getFullYear().toString()
+      if (date_diff_indays(currentDate, testDate) > 0) {
+        $(".sidebar").append(`<div class="bottom-info">
+                                <p>
+                                  Time until test: ${date_diff_indays(currentDate, testDate)}
+                                </p>
+                              </div>`)
+      } else if (date_diff_indays(currentDate, testDate)  == 0) {
+        $(".sidebar").append(`<div class="bottom-info">
+                                <p>
+                                  Time until test: It's Today!
+                                </p>
+                              </div>`)
+      } else if (date_diff_indays(currentDate, testDate) < 0) {
+        $(".sidebar").append(`<div class="bottom-info">
+                                <p>
+                                  Time until test: Done!
+                                </p>
+                              </div>`)
+      }
       $(".sidebar").append(`<p>${myjson[setName][2]}</p>`)
       $(".important-texts").append(`<p>${myjson[setName][3][0]}</p>
                                     <button onclick="ExpandBlock('one')" class="btn btn-block btn-primary text-uppercase block-one-button">Expand</button>`)

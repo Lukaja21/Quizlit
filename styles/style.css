@@ -1,6 +1,6 @@
 html, body {
-    margin: 0;
-    height: 100%;
+  margin: 0;
+  height: 100%;
 	font-family: 'Roboto', sans-serif !important;
 }
 
@@ -24,11 +24,11 @@ html, body {
 }
 
 .flashcard-text {
-    width: 100%; /*can be in percentage also.*/
-    line-height: 40vh;
-    margin: auto;
-    padding: 10px;
-    font-size:50px;
+  width: 100%; /*can be in percentage also.*/
+  line-height: 40vh;
+  margin: auto;
+  padding: 10px;
+  font-size:50px;
 }
 
 .sidebar {
@@ -55,14 +55,14 @@ html, body {
 }
 
 .moreless {
-     background:none!important;
-     color:inherit;
-     border:none; 
-     padding:0!important;
-     font: inherit;
-     /*border is optional*/
-     border-bottom:1px solid #444; 
-     cursor: pointer;
+  background:none!important;
+  color:inherit;
+  border:none; 
+  padding:0!important;
+  font: inherit;
+  /*border is optional*/
+  border-bottom:1px solid #444; 
+  cursor: pointer;
 }
 
 .headerlink {
@@ -112,9 +112,9 @@ html, body {
 	background-color: rgba(255,255,255);
 	width: 60%;
 	height: 65%;
-    margin: 0 auto;
-    padding: 10px;
-    position: relative;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
 	margin-top:7.5%;
 	border-radius:25px;
 	z-index: 1000;
@@ -141,7 +141,7 @@ html, body {
 }
 
 .offleft{
-    transform: translate(-165%)
+  transform: translate(-165%)
 }
 
 .offright {
@@ -264,4 +264,12 @@ html, body {
 
 .set-search-container {
   margin-left: -10%;
+}
+
+.bottom-info {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 5px;
 }

@@ -8,24 +8,24 @@
   <!-- jQuery library -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
   </script>
+  <!-- Bootstrap library -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </script>
   <script src="../scripts/script.js">
   </script>
-  <script src="../scripts/sets.js">
+  <script src="../scripts/load.js">
   </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-1">
-  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141204680-1');
-
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-141204680-2');
   </script>
+
   <script>
     jQuery(document).ready(function() {
         jQuery('#loading').fadeOut(1500);
@@ -36,15 +36,6 @@
 
 <body>
   <div id="loading"></div>
-  <div class="ad">
-    <div class="ad-contentt">
-      <button type="button" class="btn btn-default" onclick="hidead()">
-        <span class="glyphicon glyphicon-remove"></span>
-      </button>
-      <h1 class="ad-header">Your ad here!</h1>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/New_Logo_AD.jpg" width=300 class="ad-image">
-    </div>
-  </div>
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <img class="navbar-brand" src="https://lukaja21.github.io/Quizlit/favicon-32x32.png" alt="logo">

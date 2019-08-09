@@ -113,6 +113,7 @@ function GetSetCards(setName, cb){
       }
       myjson = JSON.parse(myjson);
       testDate = new Date(myjson[setName][4])
+      console.log(myjson)
       currentDate = new Date()
       currentMonth = currentDate.getMonth() + 1
       currentDate = currentMonth.toString() + "/" + currentDate.getUTCDate().toString() + "/" + currentDate.getFullYear().toString()

@@ -152,7 +152,7 @@ function GetSetCards(setName, cb){
 }
 //Loads Front Page
 $(document).ready(function() {
-  if(window.location.pathname == "/") {
+  if(window.location.pathname == "/" || window.location.pathname == "/index.html") {
     $.ajax({
         method: 'GET',
          url: 'https://quizlit.me/data/data.json',

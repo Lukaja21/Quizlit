@@ -18,13 +18,8 @@ $(document).ready(function() {
         $(".pagination").append("<li class='page-item'><a class='page-link' onclick='nextpage(" + i.toString() + ");'>" + i.toString() + "</a></li>")
       }
       maxpage = $('.page-item').length;
-    } else {
-      $(".subject-nav").hide()
-      if (SetContainerNumber == 0) {
-        $(".subject-container").append("<h1 class='no-sets-warning'>Oops! Looks like there are no study sets for this subject yet.</h1>")
-      }
     }
-  }, 200);
+  }, 500);
 });
 
 function nextpage(page) {

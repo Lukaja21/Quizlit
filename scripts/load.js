@@ -1,26 +1,28 @@
 const _MS_PER_DAY = 1000 * 60 * 60 * 24;
-//Populates all of the sets for the seacrh bar
+//Populates all of the sets for the seacrh bar----------------------------------------------------------------------------------------------------------------------------------------------------------
 $(document).ready(function() {
-  var myjson = (function() {
-    var myjson = null;
-    $.ajax({
-      'async': false,
-      'global': false,
-      'url': "https://api.jsonbin.io/b/5d5b704d6c4cac3e3c27fb4a/latest",
-      'dataType': "json",
-      'success': function (data) {
-          myjson = data;
-      }
-    });
-  return myjson;
-  })();
-  for (var i in myjson) {
-    y = i.replace(/\s+/g, '')
-    $(".set-search").append("<li><a style='width: auto;margin: auto' href='https://quizlit.me/sets/" + myjson[i][0] + "/" + y.toLowerCase() + ".html'>" + i + "</a></li>")
-    $(".set-search").append("<div class='dropdown-divider'></div>")
-  }
+  setTimeout(function(){
+    var myjson = (function() {
+      var myjson = null;
+      $.ajax({
+        'async': false,
+        'global': false,
+        'url': "https://api.jsonbin.io/b/5d5b704d6c4cac3e3c27fb4a/latest",
+        'dataType': "json",
+        'success': function (data) {
+            myjson = data;
+        }
+      });
+      return myjson;
+    })();
+    for (var i in myjson) {
+      y = i.replace(/\s+/g, '')
+      $(".set-search").append("<li><a style='width: auto;margin: auto' href='https://quizlit.me/sets/" + myjson[i][0] + "/" + y.toLowerCase() + ".html'>" + i + "</a></li>")
+      $(".set-search").append("<div class='dropdown-divider'></div>")
+    }
+  }, 500);
 });
-//Populates subject pages
+//Populates subject pages----------------------------------------------------------------------------------------------------------------------------------------------------------
 $(document).ready(function() {
   if(window.location.href.indexOf("subjects") > -1) {
        $.ajax({
@@ -90,7 +92,7 @@ $(document).ready(function() {
     })
   }
 })
-//Search Bar Code
+//Search Bar Code----------------------------------------------------------------------------------------------------------------------------------------------------------
 $(document).ready(function(){
   $("#myInput").on("keyup", function() {
     var value = $(this).val().toLowerCase();
@@ -99,7 +101,7 @@ $(document).ready(function(){
     });
   });
 });
-//Populates Flashcard pages
+//Populates Flashcard pages----------------------------------------------------------------------------------------------------------------------------------------------------------
 function GetSetCards(setName, cb){
   $.ajax({
     method: 'GET',
@@ -150,7 +152,7 @@ function GetSetCards(setName, cb){
     }
   })
 }
-//Loads Front Page
+//Loads Front Page----------------------------------------------------------------------------------------------------------------------------------------------------------
 $(document).ready(function() {
   if(window.location.pathname == "/" || window.location.pathname == "/index.html") {
     $.ajax({
@@ -193,7 +195,7 @@ $(document).ready(function() {
   }
 });
 
-//load feed on feed page
+//Load Feed on Feed Page--------------------------------------------------------------------------------------------------------------------------------------------
 $(document).ready(function() {
   if(window.location.href.indexOf("feed") > -1) {
     $.ajax({

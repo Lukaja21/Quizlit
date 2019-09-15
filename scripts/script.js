@@ -1,11 +1,12 @@
 var hiding = false;
 var pages;
 var maxpage;
+var accesibilityHidden = true
 
 $(document).ready(function() {
   $("#hider").hide()
-  $(".ad").hide()
   $(".less-button").hide()
+  $(".accesibility-menu").hide()
 });
 
 $(document).ready(function() {
@@ -92,4 +93,14 @@ function ShrinkBlock(block) {
   $(block).removeClass("col-lg-12")
   $(button).text("Expand")
   $(button).attr("onclick", func)
+}
+
+function accesibility() {
+  if (accesibilityHidden){
+    $(".accesibility-menu").show()
+    accesibilityHidden = false
+  } else {
+    $(".accesibility-menu").hide()
+    accesibilityHidden = true
+  }
 }

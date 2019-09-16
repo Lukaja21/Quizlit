@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Quizlit: Study Longer. Study Harder.</title>
+  <link rel="icon" href="../favicon-32x32.png">
+  <link href="../styles/style.css" rel="stylesheet" type="text/css" />
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  </script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3../bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </script>
+  <script src="../scripts/script.js">
+  </script>
+  <script src="../scripts/load.js">
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-1">
+  </script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141204680-1');
+
+  </script>
+  <script>
+    jQuery(document).ready(function() {
+        jQuery('#loading').fadeOut(1500);
+    });
+  </script>
+  <script src="https://kit.fontawesome.com/5a86f9a71a.js"></script>
+</head>
+
+<body>
+  <div id="loading"></div>
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+  <img class="navbar-brand" src="https://lukaja21.github.io/Quizlit/favicon-32x32.png" alt="logo">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Subjects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../subjects/all.html">All</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../subjects/humanities.html">Humanities</a>
+          <a class="dropdown-item" href="../subjects/math.html">Math</a>
+          <a class="dropdown-item" href="../subjects/science.html">Science</a>
+          <a class="dropdown-item" href="../subjects/chinese.html">Chinese</a>
+          <a class="dropdown-item" href="../subjects/other.html">Other</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../extras/moreinfo.html">More Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../extras/questions.html">Questions</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../extras/help.html">Help</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../games/bored.html">Bored</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="feed.html">Feed</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item dropdown">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Search Sets
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu set-search">
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="flashcard-container">
+  <span class="sidebar">
+    <p class="info-header">Info:</p>
+    <br>
+  </span>
+  <div class="flashcard">
+    <div class="flashcard-text">
+      Food
+    </div>
+  </div>
+<div>
+<footer class="container-fluid text-center" style="margin-bottom:0;">
+  <i class="fas fa-caret-left"></i>
+  <i class="fas fa-caret-right"></i>  
+</footer>
+
+<footer class="container-fluid text-center" style="margin-bottom:0;">
+  <button type="button" class="btn btn-secondary more-button" onclick="showmore()">More</button>  
+</footer>
+<footer class="container-fluid text-center" style="margin-bottom:0;">
+  <button type="button" class="btn btn-secondary less-button" onclick="showless()">Less</button>  
+</footer>
+<section class="pricing py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Free Tier -->
+      <div class="col-lg-4 block-one">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body important-texts">
+            <h5 class="card-title text-muted text-uppercase text-center">Important Texts</h5>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <!-- Plus Tier -->
+      <div class="col-lg-4 block-two">
+        <div class="card mb-5 mb-lg-0">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">Listed Vocabulary Words</h5>
+            <hr>
+            <ul class="fa-ul vocab-words">
+            </ul>
+            <button onclick="ExpandBlock('two')" class="btn btn-block btn-primary text-uppercase block-two-button">Expand</button>
+          </div>
+        </div>
+      </div>
+      <!-- Pro Tier -->
+      <div class="col-lg-4 block-three">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title text-muted text-uppercase text-center">Tips</h5>
+            <hr>
+            <ul class="fa-ul tips">
+            </ul>
+            <button onclick="ExpandBlock('three')" class="btn btn-block btn-primary text-uppercase block-three-button">Expand</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  var name = window.location.href.substring(44);
+  GetSetCards(name, cards => {
+  var card = 0
+  var side = 0
+  $( ".flashcard" ).click(function() {
+    if (side === 0) {
+      side = 1;
+    } else if (side === 1) {
+      side = 0;}
+
+    $('.flashcard-text').css("color","white");
+    $('.flashcard-text').text("...");
+    $(".flashcard").addClass("flashcard-collapsed");
+    setTimeout(function () {
+      $(".flashcard").removeClass("flashcard-collapsed");
+    }, 300);
+    setTimeout(function (){
+        $('.flashcard-text').css("color","black");
+        $('.flashcard-text').text(cards[card][side]);
+        window.scrollTo(0,-100)
+    }, 400)
+  })
+  $( ".fa-caret-left" ).click(function() {
+    if (card != 0) {
+    $(".flashcard").addClass("offleft");
+      setTimeout(function (){
+      $(".flashcard").removeClass("offleft");
+      }, 300)
+      card = card - 1;
+      side = 0;
+    }
+    $('.flashcard-text').text(cards[card][side])
+  });
+  $( ".fa-caret-right" ).click(function() {
+    if (card != cards.length - 1) {
+    $(".flashcard").addClass("offright");
+      setTimeout(function (){
+      $(".flashcard").removeClass("offright");
+      }, 300)
+      card = card + 1;
+      side = 0;
+    }
+    $('.flashcard-text').text(cards[card][side])
+  });
+  $('body').keydown(function (e){
+    if(e.keyCode === 37){
+      if (card != 0) {
+    $(".flashcard").addClass("offleft");
+      setTimeout(function (){
+      $(".flashcard").removeClass("offleft");
+      }, 300)
+        card = card - 1;
+        side = 0;
+      }
+      $('.flashcard-text').text(cards[card][side])
+    }
+  })
+  $('body').keydown(function (e){
+    if(e.keyCode === 39){
+      if (card != cards.length - 1) {
+    $(".flashcard").addClass("offright");
+      setTimeout(function (){
+      $(".flashcard").removeClass("offright");
+      }, 300)
+        card = card + 1;
+        side = 0;
+      }
+      $('.flashcard-text').text(cards[card][side])
+    }
+  })
+  $('body').keydown(function (e){
+    if(e.keyCode === 32){
+      if (side === 0) {
+        side = 1;
+      } else if (side === 1) {
+        side = 0;
+      }
+    $('.flashcard-text').css("color","white");
+    $('.flashcard-text').text("...");
+    $(".flashcard").addClass("flashcard-collapsed");
+    setTimeout(function () {
+      $(".flashcard").removeClass("flashcard-collapsed");
+    }, 300);
+    setTimeout(function (){
+        $('.flashcard-text').css("color","black");
+        $('.flashcard-text').text(cards[card][side]);
+        window.scrollTo(0,-100)
+    }, 400)
+    }
+  })
+  })
+</script>
+</body>

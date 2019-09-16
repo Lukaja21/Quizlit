@@ -17,8 +17,7 @@ $(document).ready(function() {
     })();
     for (var i in myjson) {
       y = i.replace(/\s+/g, '')
-      $(".set-search").append("<li><a style='width: auto;margin: auto' href='https://quizlit.me/sets/" + myjson[i][0] + "/" + y.toLowerCase() + ".html'>" + i + "</a></li>")
-      $(".set-search").append("<div class='dropdown-divider'></div>")
+      $("#myDropdown").append("<a href='https://quizlit.me/sets/" + myjson[i][0] + "/" + y.toLowerCase() + ".html?name=" + i + "'>" + i + "</a>")
     }
   }, 500);
 });
@@ -93,13 +92,8 @@ $(document).ready(function() {
   }
 })
 //Search Bar Code----------------------------------------------------------------------------------------------------------------------------------------------------------
-$(document).ready(function(){
-  $("#myInput").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $(".dropdown-menu li").filter(function() {
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
+$(document).ready(function() {
+    $('.js-example-basic-single').select2();
 });
 //Populates Flashcard pages----------------------------------------------------------------------------------------------------------------------------------------------------------
 function GetSetCards(setName, cb){

@@ -1,4 +1,15 @@
 const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+function titleCase(str) {
+   var splitStr = str.toLowerCase().split(' ');
+   for (var i = 0; i < splitStr.length; i++) {
+       // You do not need to check if i is larger than splitStr length, as your for does that for you
+       // Assign it back to the array
+       splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+   }
+   // Directly return the joined string
+   return splitStr.join(' '); 
+}
 //Populates all of the sets for the seacrh bar----------------------------------------------------------------------------------------------------------------------------------------------------------
 $(document).ready(function() {
   setTimeout(function(){
@@ -17,7 +28,7 @@ $(document).ready(function() {
     })();
     for (var i in myjson) {
       y = i.replace(/\s+/g, '')
-      $("#myDropdown").append("<a href='https://quizlit.me/sets/flashcard.html?name=" + i + "'>" + i + "</a>")
+      $("#myDropdown").append("<a href='https://quizlit.me/sets/flashcard.html?name=" + titleCase(i) + "'>" + i + "</a>")
     }
   }, 500);
 });

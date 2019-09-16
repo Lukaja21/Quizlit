@@ -154,7 +154,7 @@
   </div>
 </section>
 <script>
-  var name = window.location.href.substring(44);
+  var name = window.location.href.substring(44).replace("%20", " ");
   GetSetCards(name, cards => {
   var card = 0
   var side = 0

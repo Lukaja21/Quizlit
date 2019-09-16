@@ -17,7 +17,7 @@ $(document).ready(function() {
     })();
     for (var i in myjson) {
       y = i.replace(/\s+/g, '')
-      $("#myDropdown").append("<a href='https://quizlit.me/sets/" + myjson[i][0] + "/" + y.toLowerCase() + ".html?name=" + i + "'>" + i + "</a>")
+      $("#myDropdown").append("<a href='https://quizlit.me/sets/flashcard.html?name=" + i + "'>" + i + "</a>")
     }
   }, 500);
 });

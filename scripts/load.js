@@ -144,10 +144,18 @@ function GetSetCards(setName, cb){
       $(".important-texts").append(`<p>${myjson[setName][3][0]}</p>
                                     <button onclick="ExpandBlock('one')" class="btn btn-block btn-primary text-uppercase block-one-button">Expand</button>`)
       for (var i in myjson[setName][1]) {
-        $(".vocab-words").append(`<li><span class="fa-li"><i class="fas fa-circle"></i></span>${myjson[setName][1][i][0]} - ${myjson[setName][1][i][1]}</li>`)
+        $(".vocab-words").append(`<li>
+                                    <span class="fa-li">
+                                      <i class="fas fa-circle"></i>
+                                    </span>${myjson[setName][1][i][0]} - ${myjson[setName][1][i][1]}
+                                  </li>`)
       }
       for (var i in myjson[setName][3][1]) {
-        $(".tips").append(`<li><span class="fa-li"><i class="fas fa-circle"></i></span>${myjson[setName][3][1][i]}</li>`)
+        $(".tips").append(`<li>
+                            <span class="fa-li">
+                              <i class="fas fa-circle"></i>
+                            </span>${myjson[setName][3][1][i]}
+                          </li>`)
       }
       $(".pricing").hide()
       cb(myjson[setName][1]);

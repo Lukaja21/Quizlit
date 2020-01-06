@@ -154,10 +154,11 @@
   </div>
 </section>
 <script>
-  var name = "https://quizlit.me/sets/flashcard.html?name=Chinese%20Silk%20Road%202".substring(44);
+  var name = window.location.href.toString().substring(44);
   while (name.includes("%20")) {
     name = name.replace("%20", " ");
   }
+  console.log(name)
   GetSetCards(name, cards => {
   var card = 0
   var side = 0

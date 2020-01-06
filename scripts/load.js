@@ -157,6 +157,7 @@ function GetSetCards(setName, cb){
                             </span>${myjson[setName][3][1][i]}
                           </li>`)
       }
+      $("flashcard-text").text(myjson[setName][1][0][0])
       $(".pricing").hide()
       cb(myjson[setName][1]);
     }

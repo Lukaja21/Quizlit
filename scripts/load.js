@@ -10,7 +10,7 @@ function titleCase(str) {
    // Directly return the joined string
    return splitStr.join(' '); 
 }
-//Populates all of the sets for the seacrh bar----------------------------------------------------------------------------------------------------------------------------------------------------------
+//Populates all of the sets for the search bar----------------------------------------------------------------------------------------------------------------------------------------------------------
 $(document).ready(function() {
   setTimeout(function(){
     var myjson = (function() {
@@ -60,7 +60,7 @@ $(document).ready(function() {
             }
             for (let [key, value] of Object.entries(myjson)) {
               if (value[0] == subject) {
-                $(".subject-container").append(`<a href="../sets/flashcard.html?name=` + titleCase(key) + `">
+                $(".subject-container").append(`<a href="../sets/flashcard.html?name=${titleCase(key)}">
                   <div class="set-container">
                     <p class="set-container-text">
                       <img class="set-thumbnail" src="${thumbnail}">
@@ -70,7 +70,7 @@ $(document).ready(function() {
                 </a>`)
               }
             }
-            if (subject === "all") {
+            if (subject == "all") {
               for (let [key, value] of Object.entries(myjson)) {
                 if (value[0] == "chinese") {
                   var subject = "chinese"
@@ -89,7 +89,7 @@ $(document).ready(function() {
                   var thumbnail = "http://www.accurateglobalreach.com/wp-content/uploads/2019/07/systemic-evaluation.jpg"
                 }
                 console.log(key)
-                $(".subject-container").append(`<a href="../sets/flashcard.html?name=` + titleCase(key) + `">
+                $(".subject-container").append(`<a href="../sets/flashcard.html?name=${titleCase(key)}">
                   <div class="set-container">
                     <p class="set-container-text">
                       <img class="set-thumbnail" src="${thumbnail}">

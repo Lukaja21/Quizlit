@@ -189,7 +189,7 @@ $(document).ready(function() {
               <div class='card h-100'>
                 <a href='sets/flashcard.html?name=` + titleCase(key) + `'><img class='card-img-top' src='${thumbnail}'></a>
                 <div class='card-body'>
-                  <h4 class='card-title'><a href='sets/flashcard.html?name='` + titleCase(key) + `>${key}</a></h4>
+                  <h4 class='card-title'><a href='sets/flashcard.html?name=` + titleCase(key) + `'>${key}</a></h4>
                   <p class='card-text'>${myjson[key][2]}</p>
                 </div>
               </div>

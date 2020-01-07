@@ -187,7 +187,7 @@ $(document).ready(function() {
             $(".row").append(`
             <div class='col-lg-4 col-sm-6 mb-4'>
               <div class='card h-100'>
-                <a href='sets/flashcard.html?name='` + titleCase(key) + `><img class='card-img-top' src='${thumbnail}'></a>
+                <a href='sets/flashcard.html?name='` + titleCase(key) + `'><img class='card-img-top' src='${thumbnail}'></a>
                 <div class='card-body'>
                   <h4 class='card-title'><a href='sets/flashcard.html?name='` + titleCase(key) + `>${key}</a></h4>
                   <p class='card-text'>${myjson[key][2]}</p>

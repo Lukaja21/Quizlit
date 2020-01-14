@@ -6,7 +6,7 @@ var accesibilityHidden = true
 $(document).ready(function() {
   $("#hider").hide()
   $(".less-button").hide()
-  $(".accesibility-menu").hide()
+  $("#dropdown-search").hide()
 });
 
 $(document).ready(function() {
@@ -97,10 +97,10 @@ function ShrinkBlock(block) {
 
 function accesibility() {
   if (accesibilityHidden){
-    $(".accesibility-menu").show()
+    $("#dropdown-search").show()
     accesibilityHidden = false
   } else {
-    $(".accesibility-menu").hide()
+    $("#dropdown-search").hide()
     accesibilityHidden = true
   }
 }

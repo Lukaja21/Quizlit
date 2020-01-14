@@ -172,7 +172,6 @@ $(document).ready(function() {
         dataType: 'text',
         success: myjson => {
           myjson = JSON.parse(myjson);
-          console.log("ssss")
           console.log(myjson)
           for (let [key, value] of Object.entries(myjson)) {
             if (myjson[key][0] == "chinese") {

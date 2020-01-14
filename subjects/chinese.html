@@ -76,17 +76,6 @@
         <a class="nav-link" href="extras/feed.html">Feed</a>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li class="nav-item dropdown">
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Search Sets
-          <span class="caret"></span></button>
-          <ul class="dropdown-menu set-search">
-            <input class="form-control" id="myInput" type="text" placeholder="Search..">
-          </ul>
-        </div>
-      </li>
-    </ul>
   </div>
 </nav>
 
@@ -97,4 +86,21 @@
     </ul>
   </nav>
 </div>
+<div class="container">
+  <div class="row">
+  </div>
+</div>
+<div class="accesibility-menu">
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    </div>
+  </div>
+</div>
+<button onclick="accesibility();">
+  <div class="accesibility-button">
+    ?
+  </div>
+</button>
 </body>

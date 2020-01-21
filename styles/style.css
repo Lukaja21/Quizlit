@@ -193,7 +193,7 @@ html, body {
 }
 
 .set-container {
-  width:100vw;
+  width:80vw;
   height:10vh;
   background-color:white;
   -moz-box-shadow: 0 0 10px #ccc;
@@ -323,10 +323,10 @@ html, body {
   position: fixed;
   bottom: 0;
   right: 0;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  width: 50px;
-  height: 50px;
+  margin-right: .5vw;
+  margin-bottom: .5vw;
+  width: 3vw;
+  height: 5.5vh;
   border-radius: 100%;
   background-color: rgb(75, 75, 75);
   text-align: center;
@@ -385,4 +385,10 @@ html, body {
 
 .show {
   display:block;
+}
+
+#search-dropdown {
+  position: absolute;
+  top: 95vh;
+  right: 5vw;
 }

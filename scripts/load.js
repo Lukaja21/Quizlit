@@ -18,7 +18,7 @@ $(document).ready(function() {
       $.ajax({
         'async': false,
         'global': false,
-        'url': "https://api.jsonbin.io/b/5e4b243c9c65d21641ada144/latest",
+        'url': "https://api.jsonbin.io/b/5e4b26d0817c5f163f9e781d/latest",
         'dataType': "json",
         'success': function (data) {
             myjson = data;
@@ -37,7 +37,7 @@ $(document).ready(function() {
   if(window.location.href.indexOf("subjects") > -1) {
        $.ajax({
           method: 'GET',
-          url: 'https://api.jsonbin.io/b/5e4b243c9c65d21641ada144/latest',
+          url: 'https://api.jsonbin.io/b/5e4b26d0817c5f163f9e781d/latest',
           dataType: 'text',
           success: myjson => {
             myjson = JSON.parse(myjson);
@@ -107,7 +107,7 @@ $(document).ready(function() {
 function GetSetCards(setName, cb){
   $.ajax({
     method: 'GET',
-    url: 'https://api.jsonbin.io/b/5e4b243c9c65d21641ada144/latest',
+    url: 'https://api.jsonbin.io/b/5e4b26d0817c5f163f9e781d/latest',
     dataType: 'text',
     success: myjson => {
       var date_diff_indays = function(date1, date2) {
@@ -168,7 +168,7 @@ $(document).ready(function() {
   if(window.location.pathname == "/" || window.location.pathname == "/index.html") {
     $.ajax({
         method: 'GET',
-         url: 'https://api.jsonbin.io/b/5e4b243c9c65d21641ada144/latest',
+         url: 'https://api.jsonbin.io/b/5e4b26d0817c5f163f9e781d/latest',
         dataType: 'text',
         success: myjson => {
           myjson = JSON.parse(myjson);
@@ -210,7 +210,7 @@ $(document).ready(function() {
   if(window.location.href.indexOf("feed") > -1) {
     $.ajax({
       method: 'GET',
-      url: 'https://api.jsonbin.io/b/5e4b2496817c5f163f9e7729/latest',
+      url: 'https://api.jsonbin.io/b/5e4b26a69c65d21641ada25e/latest',
       dataType: 'text',
       success: myjson => {
         myjson = JSON.parse(myjson);

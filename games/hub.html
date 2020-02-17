@@ -16,6 +16,8 @@
   </script>
   <script src="../scripts/load.js">
   </script>
+  <script src="../scripts/hub.js">
+  </script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141204680-2"></script>
   <script>
@@ -53,50 +55,57 @@
           Subjects
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../subjects/all.html">All</a>
+          <a class="dropdown-item" href="#">All</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../subjects/humanities.html">Humanities</a>
-          <a class="dropdown-item" href="../subjects/math.html">Math</a>
-          <a class="dropdown-item" href="../subjects/science.html">Science</a>
-          <a class="dropdown-item" href="../subjects/chinese.html">Chinese</a>
-          <a class="dropdown-item" href="../subjects/other.html">Other</a>
+          <a class="dropdown-item" href="#">Humanities</a>
+          <a class="dropdown-item" href="#">Math</a>
+          <a class="dropdown-item" href="#">Science</a>
+          <a class="dropdown-item" href="#">Chinese</a>
+          <a class="dropdown-item" href="#">Other</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="moreinfo.html">More Info</a>
+        <a class="nav-link" href="../extras/moreinfo.html">More Info</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="questions.html">Questions</a>
+        <a class="nav-link" href="../extras/questions.html">Questions</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="help.html">Help</a>
+        <a class="nav-link" href="../extras/help.html">Help</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="../games/bored.html">Bored</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="feed.html">Feed</a>
+        <a class="nav-link" href="../extras/feed.html">Feed</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li class="nav-item dropdown">
+        <div class="dropdown">
+          <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Search Sets
+          <span class="caret"></span></button>
+          <ul class="dropdown-menu set-search">
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+          </ul>
+        </div>
       </li>
     </ul>
   </div>
 </nav>
-<div class="full"> 
-      <h1>Questions? Contact:</h1>
-      <h1>lucas_chang@cais.org</h1>
+
+<div class="hub-container">
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
+  <div class="hub-icon"></div>
 </div>
-<div class="container">
-  <div class="row">
-  </div>
-</div>
-<div class="dropdown" id="search-dropdown">
-  <button onclick="myFunction()" id="search-dropdown-button" class="btn btn-secondary dropdown-toggle">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-  </div>
-</div>
-<button onclick="accesibility();">
-  <div class="accesibility-button">
-    ?
-  </div>
-</button>
+
 </body>
+</html>

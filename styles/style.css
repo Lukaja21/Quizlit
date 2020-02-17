@@ -389,6 +389,24 @@ html, body {
 
 #search-dropdown {
   position: absolute;
-  top: 95vh;
-  right: 5vw;
+  top: 80vh;
+  right: 12.5vw;
+}
+
+.hub-icon {
+  width: 15vw;
+  height: 15vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  background-color: black;
+  border-radius: 25%;
+  margin-top: 5vh;
+  float:left;
+}
+
+.hub-container {
+  height:100%;
+  width: 95vw;
+  margin-top: 5vh;
+  margin-left: 2.5vw;
 }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)https://nicholasegan.me/2048hack/ -->
+<html lang="en" manifest="cache.appcache"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>2048 Hack Version</title>
+
+  <link href="./2048 Hack Version_files/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="https://nicholasegan.me/2048hack/favicon.ico">
+  <link rel="apple-touch-icon" href="https://nicholasegan.me/2048hack/meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="https://nicholasegan.me/2048hack/meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="https://nicholasegan.me/2048hack/meta/apple-touch-startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta property="og:title" content="2048 game">
+  <meta property="og:site_name" content="2048 game">
+  <meta property="og:description" content="Join the numbers and get to the 2048 tile! Careful: this game is extremely addictive!">
+  <meta property="og:image" content="http://gabrielecirulli.github.io/2048/meta/og_image.png">
+</head>
+<body data-gr-c-s-loaded="true">
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">20480<div class="score-addition">+4096</div></div>
+        <div class="best-container">20480</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+          <div class="score-sharing"></div>
+          <div class="mailing-list">
+            <!-- MailChimp Signup Form -->
+            <form action="http://gabrielecirulli.us8.list-manage.com/subscribe/post?u=991201206817cfb4e4247ed6c&amp;id=7928ea817b" method="post" name="mc-embedded-subscribe-form" class="mailing-list-form" target="_blank" data-children-count="2">
+              <strong>Get email updates from Gabriele</strong>
+
+              <input type="email" value="" name="EMAIL" class="mailing-list-email-field" placeholder="Your email address" spellcheck="false" data-kwimpalastatus="alive" data-kwimpalaid="1579832642530-2">
+
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -9999px;" data-children-count="1">
+                <input type="text" name="b_991201206817cfb4e4247ed6c_7928ea817b" value="">
+              </div>
+
+              <input type="submit" value="Go" name="subscribe" class="mailing-list-subscribe-button">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container"><div class="tile tile-8192 tile-position-1-1 tile-super"><div class="tile-inner">8192</div></div><div class="tile tile-2048 tile-position-1-2"><div class="tile-inner">2048</div></div><div class="tile tile-2048 tile-position-1-2"><div class="tile-inner">2048</div></div><div class="tile tile-4096 tile-position-1-2 tile-super tile-merged"><div class="tile-inner">4096</div></div><div class="tile tile-2048 tile-position-2-1"><div class="tile-inner">2048</div></div><div class="tile tile-2048 tile-position-2-2 tile-new"><div class="tile-inner">2048</div></div><div class="tile tile-2048 tile-position-3-1"><div class="tile-inner">2048</div></div></div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+      
+    </p>
+    <hr>
+      <p>Tired of all your friends doing better than you at 2048? The 2048 Hack Version lets you set the value of the generated tiles, 
+          allowing you to beat all of their scores. Alternatively, you could also set the starting value to a strange number or a word 
+          and see what happens. Just type in the value below and start playing.</p>
+      <form name="editStart" onsubmit="return false;">
+        <p><label for="start">Starting value: <input type="text" name="start" id="start" value="2" onblur="startBlur()"></label></p>
+      </form>
+    <hr>
+    <p>
+        Created by <a href="http://gabrielecirulli.com/" target="_blank">Gabrixele Cirulli.</a> Tweaked by Nicholas Egan of 
+        <a href="http://www.egansoft.com/" target="_blank">Egansoft.</a> Based on 
+        <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to 
+        <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+  </div>
+
+  <script async="" src="./2048 Hack Version_files/analytics.js.download"></script><script src="./2048 Hack Version_files/bind_polyfill.js.download"></script>
+  <script src="./2048 Hack Version_files/classlist_polyfill.js.download"></script>
+  <script src="./2048 Hack Version_files/animframe_polyfill.js.download"></script>
+  <script src="./2048 Hack Version_files/keyboard_input_manager.js.download"></script>
+  <script src="./2048 Hack Version_files/html_actuator.js.download"></script>
+  <script src="./2048 Hack Version_files/grid.js.download"></script>
+  <script src="./2048 Hack Version_files/tile.js.download"></script>
+  <script src="./2048 Hack Version_files/local_storage_manager.js.download"></script>
+  <script src="./2048 Hack Version_files/game_manager.js.download"></script>
+  <script src="./2048 Hack Version_files/application.js.download"></script>
+  <script src="./2048 Hack Version_files/hack_extras.js.download"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38191985-4', 'egansoft.github.io');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>

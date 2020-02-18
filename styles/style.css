@@ -17,6 +17,9 @@ html, body {
   -moz-box-shadow: 0 0 10px #ccc;
   -webkit-box-shadow: 0 0 10px #ccc;
   box-shadow: 0 0 10px #ccc;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 
 .flashcard-collapsed {
@@ -24,6 +27,7 @@ html, body {
 }
 
 .flashcard-text {
+  display: inline-block;
   width: 100%; 
   line-height: 40%;
   margin: auto;

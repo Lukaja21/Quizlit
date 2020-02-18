@@ -164,94 +164,110 @@
   }
   console.log(name)
   GetSetCards(name, cards => {
-  var card = 0
-  var side = 1
-  $( ".flashcard" ).click(function() {
-    if (side === 0) {
-      side = 1;
-    } else if (side === 1) {
-      side = 0;}
 
-    $('.flashcard-text').css("color","white");
-    $('.flashcard-text').text("...");
-    $(".flashcard").addClass("flashcard-collapsed");
-    setTimeout(function () {
-      $(".flashcard").removeClass("flashcard-collapsed");
-    }, 300);
-    setTimeout(function (){
-        $('.flashcard-text').css("color","black");
-        $('.flashcard-text').text(cards[card][side]);
-        window.scrollTo(0,-100)
-    }, 400)
-  })
-  $( ".fa-caret-left" ).click(function() {
-    if (card != 0) {
-    $(".flashcard").addClass("offleft");
-      setTimeout(function (){
-      $(".flashcard").removeClass("offleft");
-      }, 300)
-      card = card - 1;
-      side = 1;
+    var currentIndex = cards.length, temporaryValue, randomIndex;
+  
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+  
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+  
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      cards[currentIndex] = array[randomIndex];
+      cards[randomIndex] = temporaryValue;
     }
-    $('.flashcard-text').text(cards[card][side])
-  });
-  $( ".fa-caret-right" ).click(function() {
-    if (card != cards.length - 1) {
-    $(".flashcard").addClass("offright");
+
+    var card = 0
+    var side = 1
+    $( ".flashcard" ).click(function() {
+      if (side === 0) {
+        side = 1;
+      } else if (side === 1) {
+        side = 0;}
+  
+      $('.flashcard-text').css("color","white");
+      $('.flashcard-text').text("...");
+      $(".flashcard").addClass("flashcard-collapsed");
+      setTimeout(function () {
+        $(".flashcard").removeClass("flashcard-collapsed");
+      }, 300);
       setTimeout(function (){
-      $(".flashcard").removeClass("offright");
-      }, 300)
-      card = card + 1;
-      side = 1;
-    }
-    $('.flashcard-text').text(cards[card][side])
-  });
-  $('body').keydown(function (e){
-    if(e.keyCode === 37){
+          $('.flashcard-text').css("color","black");
+          $('.flashcard-text').text(cards[card][side]);
+          window.scrollTo(0,-100)
+      }, 400)
+    })
+    $( ".fa-caret-left" ).click(function() {
       if (card != 0) {
-    $(".flashcard").addClass("offleft");
-      setTimeout(function (){
-      $(".flashcard").removeClass("offleft");
-      }, 300)
+      $(".flashcard").addClass("offleft");
+        setTimeout(function (){
+        $(".flashcard").removeClass("offleft");
+        }, 300)
         card = card - 1;
         side = 1;
       }
       $('.flashcard-text').text(cards[card][side])
-    }
-  })
-  $('body').keydown(function (e){
-    if(e.keyCode === 39){
+    });
+    $( ".fa-caret-right" ).click(function() {
       if (card != cards.length - 1) {
-    $(".flashcard").addClass("offright");
-      setTimeout(function (){
-      $(".flashcard").removeClass("offright");
-      }, 300)
+      $(".flashcard").addClass("offright");
+        setTimeout(function (){
+        $(".flashcard").removeClass("offright");
+        }, 300)
         card = card + 1;
         side = 1;
       }
       $('.flashcard-text').text(cards[card][side])
-    }
-  })
-  $('body').keydown(function (e){
-    if(e.keyCode === 32){
-      if (side === 0) {
-        side = 1;
-      } else if (side === 1) {
-        side = 0;
+    });
+    $('body').keydown(function (e){
+      if(e.keyCode === 37){
+        if (card != 0) {
+      $(".flashcard").addClass("offleft");
+        setTimeout(function (){
+        $(".flashcard").removeClass("offleft");
+        }, 300)
+          card = card - 1;
+          side = 1;
+        }
+        $('.flashcard-text').text(cards[card][side])
       }
-    $('.flashcard-text').css("color","white");
-    $('.flashcard-text').text("...");
-    $(".flashcard").addClass("flashcard-collapsed");
-    setTimeout(function () {
-      $(".flashcard").removeClass("flashcard-collapsed");
-    }, 300);
-    setTimeout(function (){
-        $('.flashcard-text').css("color","black");
-        $('.flashcard-text').text(cards[card][side]);
-        window.scrollTo(0,-100)
-    }, 400)
-    }
-  })
+    })
+    $('body').keydown(function (e){
+      if(e.keyCode === 39){
+        if (card != cards.length - 1) {
+      $(".flashcard").addClass("offright");
+        setTimeout(function (){
+        $(".flashcard").removeClass("offright");
+        }, 300)
+          card = card + 1;
+          side = 1;
+        }
+        $('.flashcard-text').text(cards[card][side])
+      }
+    })
+    $('body').keydown(function (e){
+      if(e.keyCode === 32){
+        if (side === 0) {
+          side = 1;
+        } else if (side === 1) {
+          side = 0;
+        }
+      $('.flashcard-text').css("color","white");
+      $('.flashcard-text').text("...");
+      $(".flashcard").addClass("flashcard-collapsed");
+      setTimeout(function () {
+        $(".flashcard").removeClass("flashcard-collapsed");
+      }, 300);
+      setTimeout(function (){
+          $('.flashcard-text').css("color","black");
+          $('.flashcard-text').text(cards[card][side]);
+          window.scrollTo(0,-100)
+      }, 400)
+      }
+    })
   })
 </script>
 </body>

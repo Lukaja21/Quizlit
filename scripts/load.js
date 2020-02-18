@@ -10,6 +10,7 @@ function titleCase(str) {
    // Directly return the joined string
    return splitStr.join(' '); 
 }
+
 //Populates all of the sets for the search bar----------------------------------------------------------------------------------------------------------------------------------------------------------
 $(document).ready(function() {
   setTimeout(function(){

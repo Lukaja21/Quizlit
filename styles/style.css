@@ -5,7 +5,7 @@ html, body {
 }
 
 .flashcard {
-  margin: auto;
+  margin: 0 auto;
   padding: 10px;
   text-align: center;
   width: 45vw;
@@ -20,6 +20,7 @@ html, body {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  margin-left:27.5 vw;
 }
 
 .flashcard-collapsed {

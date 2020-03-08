@@ -79,6 +79,12 @@
       </li>
     </ul>
   </div>
+  <div class="dropdown" id="search-dropdown">
+    <button onclick="myFunction()" id="search-dropdown-button" class="btn btn-secondary dropdown-toggle">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+    </div>
+  </div>
 </nav>
 
 <div class="flashcard-container">
@@ -86,10 +92,20 @@
     <p class="info-header">Info:</p>
     <br>
   </span>
+  <span class="sidebar-right">
+    <p class="info-header">Shuffled Cards:</p>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  </span>
   <div class="flashcard">
     <div class="flashcard-text">
       Click to Start
     </div>
+  </div>
+  <div class="flashcard-count">
+    1/16
   </div>
 <div>
 <footer class="container-fluid text-center" style="margin-bottom:0;">
@@ -146,12 +162,6 @@
   <div class="row">
   </div>
 </div>
-<div class="dropdown" id="search-dropdown">
-  <button onclick="myFunction()" id="search-dropdown-button" class="btn btn-secondary dropdown-toggle">Dropdown</button>
-  <div id="myDropdown" class="dropdown-content">
-    <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-  </div>
-</div>
 <button onclick="accesibility();">
   <div class="accesibility-button">
     ?
@@ -182,6 +192,7 @@
 
     var card = 0
     var side = 1
+    $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
     $( ".flashcard" ).click(function() {
       if (side === 0) {
         side = 1;
@@ -210,6 +221,7 @@
         side = 0;
       }
       $('.flashcard-text').text(cards[card][side])
+      $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
     });
     $( ".fa-caret-right" ).click(function() {
       if (card != cards.length - 1) {
@@ -221,6 +233,7 @@
         side = 0;
       }
       $('.flashcard-text').text(cards[card][side])
+      $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
     });
     $('body').keydown(function (e){
       if(e.keyCode === 37){
@@ -233,6 +246,7 @@
           side = 0;
         }
         $('.flashcard-text').text(cards[card][side])
+        $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
       }
     })
     $('body').keydown(function (e){
@@ -246,6 +260,7 @@
           side = 0;
         }
         $('.flashcard-text').text(cards[card][side])
+        $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
       }
     })
     $('body').keydown(function (e){

@@ -181,7 +181,7 @@
     }
 
     var card = 0
-    var side = 1
+    var side = 0
     $( ".flashcard" ).click(function() {
       if (side === 0) {
         side = 1;
@@ -207,7 +207,7 @@
         $(".flashcard").removeClass("offleft");
         }, 300)
         card = card - 1;
-        side = 1;
+        side = 0;
       }
       $('.flashcard-text').text(cards[card][side])
     });
@@ -218,7 +218,7 @@
         $(".flashcard").removeClass("offright");
         }, 300)
         card = card + 1;
-        side = 1;
+        side = 0;
       }
       $('.flashcard-text').text(cards[card][side])
     });
@@ -230,7 +230,7 @@
         $(".flashcard").removeClass("offleft");
         }, 300)
           card = card - 1;
-          side = 1;
+          side = 0;
         }
         $('.flashcard-text').text(cards[card][side])
       }
@@ -243,7 +243,7 @@
         $(".flashcard").removeClass("offright");
         }, 300)
           card = card + 1;
-          side = 1;
+          side = 0;
         }
         $('.flashcard-text').text(cards[card][side])
       }

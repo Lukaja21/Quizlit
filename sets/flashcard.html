@@ -244,25 +244,28 @@
           }, 300)
         card = card - 1;
         side = 0;
+        $('.flashcard-text').text(cards[card][side])
+        $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
+      } else if (card == cards.length - 1) {
+          $('.flashcard-text').append("<button onclick='var card = 0;var side = 1;$('.flashcard-text').text(cards[card][side]);>Click me to Restart</button>")
       }
-
-      $('.flashcard-text').text(cards[card][side])
-      $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
     });
 
     $('body').keydown(function (e){
-      if(e.keyCode === 37){
-        if (card != 0) {
-          $(".flashcard").addClass("offleft");
+      if(e.keyCode === 39){
+        if (card != cards.length - 1) {
+          $(".flashcard").addClass("offright");
           setTimeout(function (){
-            $(".flashcard").removeClass("offleft");
+            $(".flashcard").removeClass("offright");
           }, 300)
-          card = card - 1;
+          card = card + 1;
           side = 0;
+          e.preventDefault();
+          $('.flashcard-text').text(cards[card][side])
+          $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
+        } else if (card == cards.length - 1) {
+          $('.flashcard-text').append("<button onclick='var card = 0;var side = 1;$('.flashcard-text').text(cards[card][side]);>Click me to Restart</button>")
         }
-        e.preventDefault();
-        $('.flashcard-text').text(cards[card][side])
-        $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
       }
     })
 
@@ -281,13 +284,13 @@
     });
 
     $('body').keydown(function (e){
-      if(e.keyCode === 39){
-        if (card != cards.length - 1) {
-          $(".flashcard").addClass("offright");
+      if(e.keyCode === 37){
+        if (card != 0) {
+          $(".flashcard").addClass("offleft");
           setTimeout(function (){
-            $(".flashcard").removeClass("offright");
+            $(".flashcard").removeClass("offleft");
           }, 300)
-          card = card + 1;
+          card = card - 1;
           side = 0;
         }
         e.preventDefault();

@@ -218,6 +218,7 @@
         } else if (side === 1) {
           side = 0;
         }
+      e.preventDefault();
       $('.flashcard-text').css("color","white");
       $('.flashcard-text').text("...");
       $(".flashcard").addClass("flashcard-collapsed");

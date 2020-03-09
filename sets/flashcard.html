@@ -260,7 +260,7 @@
           card = card - 1;
           side = 0;
         }
-
+        e.preventDefault();
         $('.flashcard-text').text(cards[card][side])
         $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
       }
@@ -290,7 +290,7 @@
           card = card + 1;
           side = 0;
         }
-
+        e.preventDefault();
         $('.flashcard-text').text(cards[card][side])
         $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
       }

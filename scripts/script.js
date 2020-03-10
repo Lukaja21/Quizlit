@@ -110,6 +110,10 @@ function accesibility() {
   }
 }
 
+function showSettings() {
+  console.log("hi")
+}
+
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
@@ -131,8 +135,3 @@ function filterFunction() {
     }
   }
 }
-
-$(".accesibility-button").click(function() {
-    rotation += 5;
-    $(this).rotate(rotation);
-});

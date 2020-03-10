@@ -2,11 +2,19 @@ var hiding = false;
 var pages;
 var maxpage;
 var accesibilityHidden = true
+var rotation = 0;
+
+jQuery.fn.rotate = function(degrees) {
+    $(this).css({'-webkit-transform' : 'rotate('+ degrees +'deg)',
+                 '-moz-transform' : 'rotate('+ degrees +'deg)',
+                 '-ms-transform' : 'rotate('+ degrees +'deg)',
+                 'transform' : 'rotate('+ degrees +'deg)'});
+    return $(this);
+};
 
 $(document).ready(function() {
   $("#hider").hide()
   $(".less-button").hide()
-  $("#search-dropdown").hide()
 });
 
 $(document).ready(function() {
@@ -126,3 +134,8 @@ function filterFunction() {
     }
   }
 }
+
+$(".accesibility-button").click(function() {
+    rotation += 5;
+    $(this).rotate(rotation);
+});

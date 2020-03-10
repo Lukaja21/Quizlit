@@ -160,17 +160,15 @@
   <div class="row">
   </div>
 </div>
-<button onclick="accesibility();">
-  <div class="accesibility-button">
-    ?
-  </div>
-</button>
+
+<i class="fas fa-cog fa-3x accesibility-button"></i>  
+
 <script>
   var name = window.location.href.toString().substring(44);
   while (name.includes("%20")) {
     name = name.replace("%20", " ");
   }
-  console.log(name)
+
   GetSetCards(name, cards => {
 
     var currentIndex = cards.length, temporaryValue, randomIndex;

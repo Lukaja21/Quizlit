@@ -187,6 +187,12 @@
     var side = 1
     $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
 
+    function reset() {
+      var card = 0
+      var side = 0
+      $('.flashcard-text').text(cards[card][side]);
+    }
+
     //When flashcard/spacebar clicked flip
     $( ".flashcard" ).click(function() {
       if (side === 0) {
@@ -262,7 +268,7 @@
           $('.flashcard-text').text(cards[card][side])
           $('.flashcard-count').text((card + 1).toString() + "/" + cards.length);
         } else if (card == cards.length - 1) {
-          $('.flashcard-text').append("<button onclick='var card = 0;var side = 1;$('.flashcard-text').text(cards[card][side]);>Click me to Restart</button>")
+          $('.flashcard-text').append("<button onclick='reset();'>Click me to Restart</button>")
         }
       }
     })
